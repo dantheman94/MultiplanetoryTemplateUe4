@@ -71,3 +71,6 @@ Plugins/*/Intermediate/*
 DerivedDataCache/*
 MultiplanetTemplate/Saved/
 MultiplanetTemplate/Intermediate/
+MultiplanetTemplate/Plugins/SpaceDesigner/Intermediate/
+MultiplanetTemplate/Binaries/
+MultiplanetTemplate/.vs/
