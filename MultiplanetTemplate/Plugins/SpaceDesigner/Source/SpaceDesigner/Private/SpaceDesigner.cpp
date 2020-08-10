@@ -25,7 +25,7 @@ void FSpaceDesignerModule::StartupModule()
 	PluginCommands = MakeShareable(new FUICommandList);
 
 	PluginCommands->MapAction(
-		FSpaceDesignerCommands::Get().OpenComposition,
+		FSpaceDesignerCommands::Get().CelestialBodyGenerator,
 		FExecuteAction::CreateRaw(this, &FSpaceDesignerModule::PluginButtonClicked),
 		FCanExecuteAction());
 		
