@@ -3,10 +3,10 @@
 
 #include "SpaceFighterPlayerController.h"
 
-#if WITH_EDITOR
+///#if WITH_EDITOR
 /* Get Screen Percentage */
 static const auto CVarScreenPercentage = IConsoleManager::Get().FindTConsoleVariableDataFloat(TEXT("r.SCreenPercentage"));
-#endif WITH_EDITOR
+///#endif WITH_EDITOR
 
 float ASpaceFighterPlayerController::GetObjectScreenRadius(AActor* InActor)
 {
@@ -16,19 +16,19 @@ float ASpaceFighterPlayerController::GetObjectScreenRadius(AActor* InActor)
 	FRotator ViewRotation; // Not Used, but required for Function call
 	float CamFOV = 90.0f; // TODO: Replace With Function that returns camera FOV
 
-#if WITH_EDITOR
+///#if WITH_EDITOR
 	float ScreenPerc = CVarScreenPercentage->GetValueOnGameThread() / 100.0f;
-#endif WITH_EDITOR
+///#endif WITH_EDITOR
 
 	/* Get the size of the viewport, and the player cameras location. */
 	GetViewportSize(Width, Height);
 	GetPlayerViewPoint(Viewlocation, ViewRotation);
 
-#if WITH_EDITOR
+///#if WITH_EDITOR
 	/* Factor in Screen Percentage & Quality Settings */
 	Width *= ScreenPerc;
 	Height *= ScreenPerc;
-#endif WITH_EDITOR
+///#endif WITH_EDITOR
 
 	/* Easy Way To Return The Size, Create a vector and scale it. Alternative would be to use FMath::Max3 */
 	float SRad = FVector2D(Width, Height).Size();
